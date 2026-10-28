@@ -39,7 +39,8 @@ export default function PetalDrift() {
                     style={{
                         left: el.left,
                         width: el.size,
-                        height: el.size
+                        height: el.size,
+                        willChange: "transform"
                     }}
                     animate={{
                         y: ["0vh", "110vh"],

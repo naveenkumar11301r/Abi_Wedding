@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className={`relative min-h-screen overflow-x-hidden selection:bg-[var(--color-gold)]/30 selection:text-[var(--color-rose-ink)] ${!scrollUnlocked || isLoading ? "overflow-hidden h-screen" : ""}`}>
+    <main className={`relative min-h-screen overflow-x-clip selection:bg-[var(--color-gold)]/30 selection:text-[var(--color-rose-ink)] ${!scrollUnlocked || isLoading ? "overflow-hidden max-h-screen" : ""}`}>
 
       {/* Preloader / Initial Royal Loading Screen */}
       <div className={`fixed inset-0 z-50 flex items-center justify-center bg-[var(--color-cream)] transition-opacity duration-1000 pointer-events-none ${isLoading ? "opacity-100" : "opacity-0"}`}>
@@ -51,15 +51,13 @@ export default function Home() {
       <div className="relative z-10 flex flex-col">
         <OpeningExperience onBloomComplete={() => setScrollUnlocked(true)} />
 
-        {scrollUnlocked && (
-          <>
-            <ReceptionDetails />
-            <LocationSection />
-            <CountdownTimer />
-            <ClosingMessage />
-            <Footer />
-          </>
-        )}
+        <div className={`transition-opacity duration-700 ease-out ${scrollUnlocked ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+          <ReceptionDetails />
+          <LocationSection />
+          <CountdownTimer />
+          <ClosingMessage />
+          <Footer />
+        </div>
       </div>
     </main>
   );

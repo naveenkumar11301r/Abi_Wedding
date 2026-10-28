@@ -20,11 +20,13 @@ export default function OpeningExperience({ onBloomComplete }) {
         if (typeof window !== "undefined") {
             window.dispatchEvent(new Event('playMusic'));
         }
-        setTimeout(onBloomComplete, 1000);
+        if (onBloomComplete) {
+            onBloomComplete();
+        }
     };
 
     return (
-        <section className={`relative flex flex-col justify-center px-6 lg:px-20 z-10 overflow-hidden transition-all duration-1000 ${isOpen ? 'py-10 lg:py-20' : 'min-h-[92vh]'}`}>
+        <section className={`relative flex flex-col justify-center px-6 lg:px-20 z-10 overflow-hidden ${isOpen ? 'py-10 lg:py-16' : 'min-h-[92vh]'}`}>
 
             {!isOpen ? (
                 <motion.div
@@ -78,7 +80,7 @@ export default function OpeningExperience({ onBloomComplete }) {
                             An Auspicious Union
                         </span>
                         <p className="font-body text-xs tracking-[0.25em] text-[var(--color-rose-ink)] font-bold uppercase py-2 px-6 rounded-full bg-white/70 border border-[var(--color-gold)]/40 shadow-sm backdrop-blur-sm group-hover:bg-[var(--color-rose-ink)] group-hover:text-white transition-all duration-300">
-                            Tap to Unveil Invitation
+                            Tap to Reveal
                         </p>
                     </div>
                 </motion.div>
@@ -181,7 +183,7 @@ export default function OpeningExperience({ onBloomComplete }) {
                             className="font-body flex flex-col items-center lg:items-end text-center lg:text-right mt-12 lg:mt-16 w-full"
                         >
                             <p className="tracking-[0.22em] uppercase text-xs md:text-sm font-bold text-[var(--color-rose-ink)] mb-4">
-                                Cordially invite you to celebrate their wedding
+                                Cordially invite you to celebrate our wedding
                             </p>
 
                             {/* Dual Events Badge */}
@@ -209,6 +211,33 @@ export default function OpeningExperience({ onBloomComplete }) {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 <span>{weddingData.reception.venue}</span>
                             </div>
+
+                            {/* Smooth Scroll Cue */}
+                            <motion.button
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.6, duration: 0.8 }}
+                                onClick={() => {
+                                    const detailsEl = document.getElementById("details");
+                                    if (detailsEl) {
+                                        detailsEl.scrollIntoView({ behavior: "smooth" });
+                                    }
+                                }}
+                                className="mt-8 flex flex-col items-center gap-1 cursor-pointer bg-transparent border-none appearance-none group"
+                            >
+                                <span className="font-serif text-[10px] tracking-[0.25em] text-[var(--color-rose-ink)]/70 uppercase font-bold group-hover:text-[var(--color-rose-ink)] transition-colors">
+                                    Scroll for Event Details
+                                </span>
+                                <motion.div
+                                    animate={{ y: [0, 5, 0] }}
+                                    transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                                    className="text-[var(--color-gold)]"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="m6 9 6 6 6-6" />
+                                    </svg>
+                                </motion.div>
+                            </motion.button>
                         </motion.div>
 
                     </div>
