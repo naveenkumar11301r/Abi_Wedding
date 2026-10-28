@@ -28,7 +28,7 @@ export default function ReceptionDetails() {
                         <div className="absolute -inset-2 rounded-3xl bg-[var(--color-gold)]/15 blur-lg" />
                         <div className="relative rounded-3xl p-1 bg-gradient-to-b from-[var(--color-gold)] via-[var(--color-cream)] to-[var(--color-rose-ink)]/20 shadow-xl overflow-hidden">
                             <img
-                                src="/dinesh.jpg"
+                                src="/dinesh.png"
                                 alt="Dinesh - The Groom"
                                 className="w-full h-auto rounded-[22px] object-cover"
                             />
@@ -55,7 +55,7 @@ export default function ReceptionDetails() {
                         <div className="absolute -inset-2 rounded-3xl bg-[var(--color-gold)]/15 blur-lg" />
                         <div className="relative rounded-3xl p-1 bg-gradient-to-b from-[var(--color-gold)] via-[var(--color-cream)] to-[var(--color-rose-ink)]/20 shadow-xl overflow-hidden">
                             <img
-                                src="/abinaya.jpg"
+                                src="/abinaya.png"
                                 alt="Abinaya - The Bride"
                                 className="w-full h-auto rounded-[22px] object-cover"
                             />
@@ -108,7 +108,7 @@ export default function ReceptionDetails() {
                         className="flex flex-col items-center max-w-[130px]"
                     >
                         <div className="rounded-2xl p-1 bg-gradient-to-b from-[var(--color-gold)] to-white shadow-md overflow-hidden">
-                            <img src="/dinesh.jpg" alt="Dinesh" className="w-full h-auto rounded-xl object-cover" />
+                            <img src="/dinesh.png" alt="Dinesh" className="w-full h-auto rounded-xl object-cover" />
                         </div>
                         <span className="mt-1.5 font-serif text-[10px] tracking-wider uppercase text-[var(--color-rose-ink)] font-bold">
                             Dinesh
@@ -128,7 +128,7 @@ export default function ReceptionDetails() {
                         className="flex flex-col items-center max-w-[130px]"
                     >
                         <div className="rounded-2xl p-1 bg-gradient-to-b from-[var(--color-gold)] to-white shadow-md overflow-hidden">
-                            <img src="/abinaya.jpg" alt="Abinaya" className="w-full h-auto rounded-xl object-cover" />
+                            <img src="/abinaya.png" alt="Abinaya" className="w-full h-auto rounded-xl object-cover" />
                         </div>
                         <span className="mt-1.5 font-serif text-[10px] tracking-wider uppercase text-[var(--color-rose-ink)] font-bold">
                             Abinaya
