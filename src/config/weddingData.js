@@ -61,8 +61,8 @@ export const weddingData = {
         }
     ],
     music: {
-        src: "/Kaaara-2.mp3",
-        title: "Celebration Melody",
+        src: "/Mudhal_Kanave_Bgm.mp3",
+        title: "Mudhal Kanave BGM",
         enabled: true
     },
     qrCode: {
