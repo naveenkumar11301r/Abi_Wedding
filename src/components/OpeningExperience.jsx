@@ -202,7 +202,7 @@ export default function OpeningExperience({ onBloomComplete }) {
                                         Muhurtham
                                     </span>
                                     <span className="block font-heading text-base font-semibold text-[var(--color-rose-ink)]">
-                                        Nov 11 • Morning 6:00 AM
+                                        Nov 11 • 6:00 AM to 7:00 AM
                                     </span>
                                 </div>
                             </div>

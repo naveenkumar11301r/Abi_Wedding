@@ -212,7 +212,7 @@ export default function ReceptionDetails() {
                                     Wednesday, November 11, 2026
                                 </p>
                                 <p className="font-body text-base font-semibold text-[var(--color-rose-ink)]/90">
-                                    Morning 6:00 AM onwards
+                                    Morning 6:00 AM to 7:00 AM
                                 </p>
                             </div>
 
